@@ -16,7 +16,7 @@
 */
 
 export class FavoriteSiteBodyCreate {
-    id: string;
+    id?: string;
 
     constructor(input?: any) {
 

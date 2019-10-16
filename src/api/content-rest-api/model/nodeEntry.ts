@@ -18,7 +18,7 @@
 import { Node } from './node';
 
 export class NodeEntry {
-    entry: Node;
+    entry?: Node;
 
     constructor(input?: any) {
 

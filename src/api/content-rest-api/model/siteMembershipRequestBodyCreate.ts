@@ -17,7 +17,7 @@
 
 export class SiteMembershipRequestBodyCreate {
     message?: string;
-    id: string;
+    id?: string;
     title?: string;
 
     constructor(input?: any) {

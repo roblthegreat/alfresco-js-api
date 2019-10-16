@@ -22,9 +22,9 @@ and the number of network administrators
 
  */
 export class NetworkQuota {
-    id: string;
-    limit: number;
-    usage: number;
+    id?: string;
+    limit?: number;
+    usage?: number;
 
     constructor(input?: any) {
 

@@ -21,7 +21,7 @@ export class ActionDefinition {
     /**
      * Identifier of the action definition — used for example when executing an action
      */
-    id: string;
+    id?: string;
     /**
      * name of the action definition, e.g. \"move\"
      */
@@ -37,11 +37,11 @@ export class ActionDefinition {
     /**
      * QNames of the types this action applies to
      */
-    applicableTypes: string[];
+    applicableTypes?: string[];
     /**
      * whether the basic action definition supports action tracking or not
      */
-    trackStatus: boolean;
+    trackStatus?: boolean;
     parameterDefinitions?: ActionParameterDefinition[];
 
     constructor(input?: any) {

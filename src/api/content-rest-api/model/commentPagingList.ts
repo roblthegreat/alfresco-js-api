@@ -19,8 +19,8 @@ import { CommentEntry } from './commentEntry';
 import { Pagination } from '../../content-rest-api/model/pagination';
 
 export class CommentPagingList {
-    pagination: Pagination;
-    entries: CommentEntry[];
+    pagination?: Pagination;
+    entries?: CommentEntry[];
 
     constructor(input?: any) {
 

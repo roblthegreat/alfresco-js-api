@@ -16,7 +16,7 @@
 */
 
 export class FavoriteSite {
-    id: string;
+    id?: string;
 
     constructor(input?: any) {
 

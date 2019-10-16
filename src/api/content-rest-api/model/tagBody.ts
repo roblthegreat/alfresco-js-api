@@ -16,7 +16,7 @@
 */
 
 export class TagBody {
-    tag: string;
+    tag?: string;
 
     constructor(input?: any) {
 

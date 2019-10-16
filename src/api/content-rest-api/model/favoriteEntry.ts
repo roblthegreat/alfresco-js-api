@@ -18,7 +18,7 @@
 import { Favorite } from './favorite';
 
 export class FavoriteEntry {
-    entry: Favorite;
+    entry?: Favorite;
 
     constructor(input?: any) {
 

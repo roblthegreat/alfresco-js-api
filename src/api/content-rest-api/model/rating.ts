@@ -25,7 +25,7 @@ ratings and to add a new rating.
 
  */
 export class Rating {
-    id: string;
+    id?: string;
     aggregate?: RatingAggregate;
     ratedAt?: Date;
     /**

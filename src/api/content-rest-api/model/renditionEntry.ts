@@ -18,7 +18,7 @@
 import { Rendition } from './rendition';
 
 export class RenditionEntry {
-    entry: Rendition;
+    entry?: Rendition;
 
     constructor(input?: any) {
 

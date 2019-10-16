@@ -18,7 +18,7 @@
 import { Download } from './download';
 
 export class DownloadEntry {
-    entry: Download;
+    entry?: Download;
 
     constructor(input?: any) {
 

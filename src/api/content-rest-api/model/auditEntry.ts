@@ -19,10 +19,10 @@ import { DateAlfresco } from '../../content-rest-api/model/dateAlfresco';
 import { UserInfo } from '../../content-rest-api/model/userInfo';
 
 export class AuditEntry {
-    id: string;
-    auditApplicationId: string;
-    createdByUser: UserInfo;
-    createdAt: Date;
+    id?: string;
+    auditApplicationId?: string;
+    createdByUser?: UserInfo;
+    createdAt?: Date;
     values?: { [key: string]: string; };
 
     constructor(input?: any) {

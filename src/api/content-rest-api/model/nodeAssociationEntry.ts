@@ -18,7 +18,7 @@
 import { NodeAssociation } from './nodeAssociation';
 
 export class NodeAssociationEntry {
-    entry: NodeAssociation;
+    entry?: NodeAssociation;
 
     constructor(input?: any) {
 

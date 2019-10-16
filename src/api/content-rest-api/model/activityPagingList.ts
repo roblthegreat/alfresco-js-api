@@ -19,8 +19,8 @@ import { ActivityEntry } from './activityEntry';
 import { Pagination } from '../../content-rest-api/model/pagination';
 
 export class ActivityPagingList {
-    pagination: Pagination;
-    entries: ActivityEntry[];
+    pagination?: Pagination;
+    entries?: ActivityEntry[];
 
     constructor(input?: any) {
 

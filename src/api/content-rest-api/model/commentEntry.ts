@@ -18,7 +18,7 @@
 import { Comment } from './comment';
 
 export class CommentEntry {
-    entry: Comment;
+    entry?: Comment;
 
     constructor(input?: any) {
 

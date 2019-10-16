@@ -18,7 +18,7 @@
 import { Group } from './group';
 
 export class GroupEntry {
-    entry: Group;
+    entry?: Group;
 
     constructor(input?: any) {
 

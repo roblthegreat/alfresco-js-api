@@ -16,8 +16,8 @@
 */
 
 export class Tag {
-    id: string;
-    tag: string;
+    id?: string;
+    tag?: string;
 
     constructor(input?: any) {
 

@@ -18,11 +18,11 @@
 import { Company } from './company';
 
 export class PersonBodyCreate {
-    id: string;
-    firstName: string;
+    id?: string;
+    firstName?: string;
     lastName?: string;
     description?: string;
-    email: string;
+    email?: string;
     skypeId?: string;
     googleId?: string;
     instantMessageId?: string;
@@ -34,7 +34,7 @@ export class PersonBodyCreate {
     userStatus?: string;
     enabled?: boolean;
     emailNotificationsEnabled?: boolean;
-    password: string;
+    password?: string;
     aspectNames?: string[];
     properties?: { [key: string]: string; };
 

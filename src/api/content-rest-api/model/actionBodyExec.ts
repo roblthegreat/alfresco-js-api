@@ -16,7 +16,7 @@
 */
 
 export class ActionBodyExec {
-    actionDefinitionId: string;
+    actionDefinitionId?: string;
     /**
      * The entity upon which to execute the action, typically a node ID or similar.
      */

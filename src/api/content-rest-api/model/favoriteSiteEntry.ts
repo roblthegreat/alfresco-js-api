@@ -18,7 +18,7 @@
 import { FavoriteSite } from './favoriteSite';
 
 export class FavoriteSiteEntry {
-    entry: FavoriteSite;
+    entry?: FavoriteSite;
 
     constructor(input?: any) {
 

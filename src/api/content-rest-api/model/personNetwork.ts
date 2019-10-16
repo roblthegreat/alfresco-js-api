@@ -28,12 +28,12 @@ export class PersonNetwork {
     /**
      * This network's unique id
      */
-    id: string;
+    id?: string;
     /**
      * Is this the home network?
      */
     homeNetwork?: boolean;
-    isEnabled: boolean;
+    isEnabled?: boolean;
     createdAt?: Date;
     paidNetwork?: boolean;
     subscriptionLevel?: PersonNetwork.SubscriptionLevelEnum | string;

@@ -16,9 +16,9 @@
 */
 
 export class ContentInfo {
-    mimeType: string;
-    mimeTypeName: string;
-    sizeInBytes: number;
+    mimeType?: string;
+    mimeTypeName?: string;
+    sizeInBytes?: number;
     encoding?: string;
 
     constructor(input?: any) {

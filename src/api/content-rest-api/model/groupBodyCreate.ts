@@ -16,8 +16,8 @@
 */
 
 export class GroupBodyCreate {
-    id: string;
-    displayName: string;
+    id?: string;
+    displayName?: string;
     parentIds?: string[];
 
     constructor(input?: any) {

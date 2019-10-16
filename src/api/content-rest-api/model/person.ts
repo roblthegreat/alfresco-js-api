@@ -20,12 +20,12 @@ import { Company } from './company';
 import { DateAlfresco } from '../../content-rest-api/model/dateAlfresco';
 
 export class Person {
-    id: string;
-    firstName: string;
+    id?: string;
+    firstName?: string;
     lastName?: string;
     description?: string;
     avatarId?: string;
-    email: string;
+    email?: string;
     skypeId?: string;
     googleId?: string;
     instantMessageId?: string;
@@ -36,7 +36,7 @@ export class Person {
     telephone?: string;
     statusUpdatedAt?: Date;
     userStatus?: string;
-    enabled: boolean;
+    enabled?: boolean;
     emailNotificationsEnabled?: boolean;
     aspectNames?: string[];
     properties?: { [key: string]: string; };

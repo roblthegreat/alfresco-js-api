@@ -27,11 +27,11 @@ export class Activity {
     /**
      * The id of the person who performed the activity
      */
-    postPersonId: string;
+    postPersonId?: string;
     /**
      * The unique id of the activity
      */
-    id: number;
+    id?: number;
     /**
      * The unique id of the site on which the activity was performed
      */
@@ -43,7 +43,7 @@ export class Activity {
     /**
      * The feed on which this activity was posted
      */
-    feedPersonId: string;
+    feedPersonId?: string;
     /**
      * An object summarizing the activity
      */
@@ -51,7 +51,7 @@ export class Activity {
     /**
      * The type of the activity posted
      */
-    activityType: string;
+    activityType?: string;
 
     constructor(input?: any) {
 

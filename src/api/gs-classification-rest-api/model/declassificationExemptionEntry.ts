@@ -18,7 +18,7 @@
 import { DeclassificationExemption } from './declassificationExemption';
 
 export class DeclassificationExemptionEntry {
-    entry: DeclassificationExemption;
+    entry?: DeclassificationExemption;
 
     constructor(input?: any) {
 

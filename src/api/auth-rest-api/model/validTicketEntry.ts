@@ -18,7 +18,7 @@
 import { ValidTicket } from './validTicket';
 
 export class ValidTicketEntry {
-    entry: ValidTicket;
+    entry?: ValidTicket;
 
     constructor(input?: any) {
 

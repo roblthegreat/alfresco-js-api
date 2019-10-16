@@ -18,7 +18,7 @@
 import { ActionExecResult } from './actionExecResult';
 
 export class ActionExecResultEntry {
-    entry: ActionExecResult;
+    entry?: ActionExecResult;
 
     constructor(input?: any) {
 

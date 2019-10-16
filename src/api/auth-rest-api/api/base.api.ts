@@ -20,7 +20,7 @@ import { AlfrescoApiClient } from '../../../alfrescoApiClient';
 
 export class BaseApi {
 
-    apiClient: AlfrescoApiClient;
+    apiClient?: AlfrescoApiClient;
 
     constructor(alfrescoApi?: AlfrescoApi) {
         if (alfrescoApi) {

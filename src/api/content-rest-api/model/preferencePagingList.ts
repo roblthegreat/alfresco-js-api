@@ -19,8 +19,8 @@ import { Pagination } from '../../content-rest-api/model/pagination';
 import { PreferenceEntry } from './preferenceEntry';
 
 export class PreferencePagingList {
-    pagination: Pagination;
-    entries: PreferenceEntry[];
+    pagination?: Pagination;
+    entries?: PreferenceEntry[];
 
     constructor(input?: any) {
 

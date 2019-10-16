@@ -18,7 +18,7 @@
 import { SiteContainer } from './siteContainer';
 
 export class SiteContainerEntry {
-    entry: SiteContainer;
+    entry?: SiteContainer;
 
     constructor(input?: any) {
 

@@ -18,7 +18,7 @@
 import { Topic } from './topic';
 
 export class TopicEntry {
-    entry: Topic;
+    entry?: Topic;
 
     constructor(input?: any) {
 

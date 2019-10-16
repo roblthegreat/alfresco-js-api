@@ -22,10 +22,8 @@ export class BaseApi {
 
     apiClient: AlfrescoApiClient;
 
-    constructor(alfrescoApi?: AlfrescoApi) {
-        if (alfrescoApi) {
-            this.apiClient = alfrescoApi.contentClient;
-        }
+    constructor(alfrescoApi: AlfrescoApi) {
+        this.apiClient = alfrescoApi.contentClient;
     }
 
     errorMessage(param: string, methodName: string) {

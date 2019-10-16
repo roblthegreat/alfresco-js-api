@@ -18,7 +18,7 @@
 import { PersonNetwork } from './personNetwork';
 
 export class PersonNetworkEntry {
-    entry: PersonNetwork;
+    entry?: PersonNetwork;
 
     constructor(input?: any) {
 

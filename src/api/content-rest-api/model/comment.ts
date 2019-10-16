@@ -19,15 +19,15 @@ import { DateAlfresco } from '../../content-rest-api/model/dateAlfresco';
 import { Person } from './person';
 
 export class Comment {
-    id: string;
-    content: string;
-    createdBy: Person;
-    createdAt: Date;
-    edited: boolean;
-    modifiedBy: Person;
-    modifiedAt: Date;
-    canEdit: boolean;
-    canDelete: boolean;
+    id?: string;
+    content?: string;
+    createdBy?: Person;
+    createdAt?: Date;
+    edited?: boolean;
+    modifiedBy?: Person;
+    modifiedAt?: Date;
+    canEdit?: boolean;
+    canDelete?: boolean;
 
     constructor(input?: any) {
 

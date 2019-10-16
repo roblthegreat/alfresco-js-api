@@ -26,7 +26,7 @@ export class Favorite {
     /**
      * The guid of the object that is a favorite.
      */
-    targetGuid: string;
+    targetGuid?: string;
     /**
      * The time the object was made a favorite.
      */

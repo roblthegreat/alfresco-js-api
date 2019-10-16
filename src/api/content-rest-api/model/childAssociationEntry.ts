@@ -18,7 +18,7 @@
 import { ChildAssociation } from './childAssociation';
 
 export class ChildAssociationEntry {
-    entry: ChildAssociation;
+    entry?: ChildAssociation;
 
     constructor(input?: any) {
 

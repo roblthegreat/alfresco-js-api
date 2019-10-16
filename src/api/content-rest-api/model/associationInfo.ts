@@ -16,7 +16,7 @@
 */
 
 export class AssociationInfo {
-    assocType: string;
+    assocType?: string;
 
     constructor(input?: any) {
 

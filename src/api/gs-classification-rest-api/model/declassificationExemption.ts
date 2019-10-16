@@ -16,9 +16,9 @@
 */
 
 export class DeclassificationExemption {
-    id: string;
-    code: string;
-    description: string;
+    id?: string;
+    code?: string;
+    description?: string;
 
     constructor(input?: any) {
 

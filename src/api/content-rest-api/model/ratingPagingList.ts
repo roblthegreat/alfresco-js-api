@@ -19,8 +19,8 @@ import { Pagination } from '../../content-rest-api/model/pagination';
 import { RatingEntry } from './ratingEntry';
 
 export class RatingPagingList {
-    pagination: Pagination;
-    entries: RatingEntry[];
+    pagination?: Pagination;
+    entries?: RatingEntry[];
 
     constructor(input?: any) {
 

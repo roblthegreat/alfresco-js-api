@@ -18,7 +18,7 @@
 import { Activity } from './activity';
 
 export class ActivityEntry {
-    entry: Activity;
+    entry?: Activity;
 
     constructor(input?: any) {
 

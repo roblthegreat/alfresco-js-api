@@ -18,7 +18,7 @@
 import { InstructionBody } from './instructionBody';
 
 export class TopicBody {
-    name: string;
+    name?: string;
     description?: string;
     instruction?: InstructionBody;
 

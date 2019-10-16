@@ -16,7 +16,7 @@
 */
 
 export class RequestBodyFile {
-    targetParentId: string;
+    targetParentId?: string;
 
     constructor(input?: any) {
 

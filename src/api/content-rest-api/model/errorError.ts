@@ -17,10 +17,10 @@
 
 export class ErrorError {
     errorKey?: string;
-    statusCode: number;
-    briefSummary: string;
-    stackTrace: string;
-    descriptionURL: string;
+    statusCode?: number;
+    briefSummary?: string;
+    stackTrace?: string;
+    descriptionURL?: string;
     logId?: string;
 
     constructor(input?: any) {

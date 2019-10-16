@@ -23,7 +23,7 @@ export class Preference {
     /**
      * The unique id of the preference
      */
-    id: string;
+    id?: string;
     /**
      * The value of the preference. Note that this can be of any JSON type.
      */

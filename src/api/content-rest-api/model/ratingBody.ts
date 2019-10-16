@@ -19,11 +19,11 @@ export class RatingBody {
     /**
      * The rating scheme type. Possible values are likes and fiveStar.
      */
-    id: RatingBody.IdEnum | string;
+    id?: RatingBody.IdEnum | string;
     /**
      * The rating. The type is specific to the rating scheme, boolean for the likes and an integer for the fiveStar
      */
-    myRating: string;
+    myRating?: string;
 
     constructor(input?: any) {
 

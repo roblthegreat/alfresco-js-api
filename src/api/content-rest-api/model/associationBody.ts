@@ -16,8 +16,8 @@
 */
 
 export class AssociationBody {
-    targetId: string;
-    assocType: string;
+    targetId?: string;
+    assocType?: string;
 
     constructor(input?: any) {
 

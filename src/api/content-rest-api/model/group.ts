@@ -16,9 +16,9 @@
 */
 
 export class Group {
-    id: string;
-    displayName: string;
-    isRoot: boolean;
+    id?: string;
+    displayName?: string;
+    isRoot?: boolean;
     parentIds?: string[];
     zones?: string[];
 

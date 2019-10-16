@@ -18,7 +18,7 @@
 import { Preference } from './preference';
 
 export class PreferenceEntry {
-    entry: Preference;
+    entry?: Preference;
 
     constructor(input?: any) {
 

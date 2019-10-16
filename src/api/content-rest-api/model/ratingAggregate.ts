@@ -16,7 +16,7 @@
 */
 
 export class RatingAggregate {
-    numberOfRatings: number;
+    numberOfRatings?: number;
     average?: number;
 
     constructor(input?: any) {

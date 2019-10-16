@@ -18,7 +18,7 @@
 import { Rating } from './rating';
 
 export class RatingEntry {
-    entry: Rating;
+    entry?: Rating;
 
     constructor(input?: any) {
 

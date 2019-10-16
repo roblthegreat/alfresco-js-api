@@ -19,8 +19,8 @@ import { FavoriteEntry } from './favoriteEntry';
 import { Pagination } from '../../content-rest-api/model/pagination';
 
 export class FavoritePagingList {
-    pagination: Pagination;
-    entries: FavoriteEntry[];
+    pagination?: Pagination;
+    entries?: FavoriteEntry[];
 
     constructor(input?: any) {
 

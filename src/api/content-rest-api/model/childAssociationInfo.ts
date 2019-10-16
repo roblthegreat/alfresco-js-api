@@ -16,8 +16,8 @@
 */
 
 export class ChildAssociationInfo {
-    assocType: string;
-    isPrimary: boolean;
+    assocType?: string;
+    isPrimary?: boolean;
 
     constructor(input?: any) {
 

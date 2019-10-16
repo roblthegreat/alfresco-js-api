@@ -18,7 +18,7 @@
 import { DateAlfresco } from '../../content-rest-api/model/dateAlfresco';
 
 export class SharedLinkBodyCreate {
-    nodeId: string;
+    nodeId?: string;
     expiresAt?: Date;
 
     constructor(input?: any) {
