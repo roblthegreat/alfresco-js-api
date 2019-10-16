@@ -18,7 +18,7 @@
 import { UnfiledRecordFolder } from './unfiledRecordFolder';
 
 export class UnfiledRecordFolderEntry {
-    entry: UnfiledRecordFolder;
+    entry?: UnfiledRecordFolder;
 
     constructor(input?: any) {
 

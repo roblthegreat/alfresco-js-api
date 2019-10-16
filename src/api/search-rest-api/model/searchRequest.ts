@@ -36,7 +36,7 @@ import { RequestStats } from './requestStats';
 import { RequestTemplates } from './requestTemplates';
 
 export class SearchRequest {
-    query: RequestQuery;
+    query?: RequestQuery;
     paging?: RequestPagination;
     include?: RequestInclude;
     /**

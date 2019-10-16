@@ -21,15 +21,15 @@ import { Instruction } from './instruction';
 import { Path } from './path';
 
 export class Topic {
-    id: string;
-    name: string;
+    id?: string;
+    name?: string;
     description?: string;
     /**
      * Flag indicating whether the topic has an instruction or not.
      */
-    hasInstruction: boolean;
+    hasInstruction?: boolean;
     instruction?: Instruction;
-    createdAt: Date;
+    createdAt?: Date;
     /**
      * Flag indicating whether the topic has subtopics. This field is only included when requested.
      */

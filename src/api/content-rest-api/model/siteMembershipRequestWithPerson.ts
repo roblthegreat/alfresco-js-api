@@ -20,10 +20,10 @@ import { Person } from './person';
 import { Site } from './site';
 
 export class SiteMembershipRequestWithPerson {
-    id: string;
-    createdAt: Date;
-    site: Site;
-    person: Person;
+    id?: string;
+    createdAt?: Date;
+    site?: Site;
+    person?: Person;
     message?: string;
 
     constructor(input?: any) {

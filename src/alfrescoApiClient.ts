@@ -21,8 +21,6 @@ import { AlfrescoApiConfig } from './alfrescoApiConfig';
 
 import * as  superagent_ from 'superagent';
 import { Authentication } from './authentication/authentication';
-import { BasicAuth } from './authentication/basicAuth';
-import { Oauth2 } from './authentication/oauth2';
 import { Response } from 'superagent';
 
 const EventEmitter = ee;
@@ -40,10 +38,10 @@ export class AlfrescoApiClient implements ee.Emitter {
     emit: (type: string, ...args: any[]) => void;
 
     storage: Storage;
-    host: string;
-    className: string;
-    config: AlfrescoApiConfig;
-    url: string;
+    host?: string;
+    className?: string;
+    config?: AlfrescoApiConfig;
+    url?: string;
     /**
      * The base URL against which to resolve every API call's (relative) path.
      */
@@ -240,10 +238,11 @@ export class AlfrescoApiClient implements ee.Emitter {
      */
     applyAuthToRequest(request: any) {
         if (this.authentications) {
+            const basicAuth = this.authentications.basicAuth;
+
             switch (this.authentications.type) {
                 case 'basic':
-                    const basicAuth: BasicAuth = this.authentications.basicAuth;
-                    if (basicAuth.username || basicAuth.password) {
+                    if (basicAuth && (basicAuth.username || basicAuth.password)) {
                         request.auth(
                             basicAuth.username ? encodeURI(basicAuth.username) : '',
                             basicAuth.password ? encodeURI(basicAuth.password) : ''
@@ -251,13 +250,13 @@ export class AlfrescoApiClient implements ee.Emitter {
                     }
                     break;
                 case 'activiti':
-                    if (this.authentications.basicAuth.ticket) {
-                        request.set({ 'Authorization': this.authentications.basicAuth.ticket });
+                    if (basicAuth && basicAuth.ticket) {
+                        request.set({ 'Authorization': basicAuth.ticket });
                     }
                     break;
                 case 'oauth2':
-                    const oauth2: Oauth2 = this.authentications.oauth2;
-                    if (oauth2.accessToken) {
+                    const oauth2 = this.authentications.oauth2;
+                    if (oauth2 && oauth2.accessToken) {
                         request.set({ 'Authorization': 'Bearer ' + oauth2.accessToken });
                     }
                     break;
@@ -299,8 +298,8 @@ export class AlfrescoApiClient implements ee.Emitter {
         return data;
     }
 
-    basicAuth(username: string, password: string): string {
-        const str: any = username + ':' + password;
+    basicAuth(username: string = '', password: string = ''): string {
+        const str = username + ':' + password;
 
         let base64;
 
@@ -649,7 +648,7 @@ export class AlfrescoApiClient implements ee.Emitter {
         let alfTicketFragment = '';
         if (ticket) {
             alfTicketFragment = '&alf_ticket=' + ticket;
-        } else if (this.config.ticketEcm) {
+        } else if (this.config && this.config.ticketEcm) {
             alfTicketFragment = '&alf_ticket=' + this.config.ticketEcm;
         }
 

@@ -18,7 +18,7 @@
 import { RecordFolder } from './recordFolder';
 
 export class RecordFolderEntry {
-    entry: RecordFolder;
+    entry?: RecordFolder;
 
     constructor(input?: any) {
 

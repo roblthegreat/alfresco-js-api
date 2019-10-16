@@ -19,19 +19,19 @@ import { DateAlfresco } from '../../content-rest-api/model/dateAlfresco';
 import { UserInfo } from '../../content-rest-api/model/userInfo';
 
 export class TransferContainer {
-    id: string;
-    parentId: string;
+    id?: string;
+    parentId?: string;
     /**
      * The name must not contain spaces or the following special characters: * \" < > \\ / ? : and |.
 The character . must not be used at the end of the name.
 
      */
-    name: string;
-    nodeType: string;
-    modifiedAt: Date;
-    modifiedByUser: UserInfo;
-    createdAt: Date;
-    createdByUser: UserInfo;
+    name?: string;
+    nodeType?: string;
+    modifiedAt?: Date;
+    modifiedByUser?: UserInfo;
+    createdAt?: Date;
+    createdByUser?: UserInfo;
     aspectNames?: string[];
     properties?: any;
     allowableOperations?: string[];

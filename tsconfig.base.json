@@ -9,6 +9,7 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noImplicitReturns": true,
+        "strict": true,
         "allowSyntheticDefaultImports": true,
         "suppressImplicitAnyIndexErrors": true,
         "moduleResolution": "node",

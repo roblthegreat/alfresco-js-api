@@ -18,7 +18,7 @@
 import { Person } from './person';
 
 export class PersonEntry {
-    entry: Person;
+    entry?: Person;
 
     constructor(input?: any) {
 

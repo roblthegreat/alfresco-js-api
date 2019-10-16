@@ -16,7 +16,7 @@
 */
 
 export class SecurityControlSetting {
-    key: string;
+    key?: string;
     value: any;
 
     constructor(input?: any) {

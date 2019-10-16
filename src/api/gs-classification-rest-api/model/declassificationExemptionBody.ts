@@ -16,8 +16,8 @@
 */
 
 export class DeclassificationExemptionBody {
-    code: string;
-    description: string;
+    code?: string;
+    description?: string;
 
     constructor(input?: any) {
 

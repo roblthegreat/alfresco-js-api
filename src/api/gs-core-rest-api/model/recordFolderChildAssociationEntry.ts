@@ -18,7 +18,7 @@
 import { RecordFolderChildAssociation } from './recordFolderChildAssociation';
 
 export class RecordFolderChildAssociationEntry {
-    entry: RecordFolderChildAssociation;
+    entry?: RecordFolderChildAssociation;
 
     constructor(input?: any) {
 

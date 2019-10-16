@@ -18,7 +18,7 @@
 import { SecurityMarks } from './securityMarks';
 
 export class SecurityMarkInformation {
-    add: SecurityMarks;
+    add?: SecurityMarks;
 
     constructor(input?: any) {
 

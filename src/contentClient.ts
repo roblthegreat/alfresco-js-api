@@ -22,7 +22,7 @@ import { Authentication } from './authentication/authentication';
 export class ContentClient extends AlfrescoApiClient {
 
     className = 'ContentClient';
-    servicePath: string;
+    servicePath?: string;
 
     constructor(config: AlfrescoApiConfig, servicePath: string) {
         super();
@@ -38,8 +38,10 @@ export class ContentClient extends AlfrescoApiClient {
     }
 
     changeHost() {
-        this.host = this.config.hostEcm;
-        this.basePath = `${this.config.hostEcm}/${this.config.contextRoot}${this.servicePath}`;
+        if (this.config) {
+            this.host = this.config.hostEcm;
+            this.basePath = `${this.config.hostEcm}/${this.config.contextRoot}${this.servicePath}`;
+        }
     }
 
     /**

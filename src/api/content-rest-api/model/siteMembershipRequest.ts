@@ -19,9 +19,9 @@ import { DateAlfresco } from '../../content-rest-api/model/dateAlfresco';
 import { Site } from './site';
 
 export class SiteMembershipRequest {
-    id: string;
-    createdAt: Date;
-    site: Site;
+    id?: string;
+    createdAt?: Date;
+    site?: Site;
     message?: string;
 
     constructor(input?: any) {

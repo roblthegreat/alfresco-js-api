@@ -18,7 +18,7 @@
 import { RepositoryEntry } from './repositoryEntry';
 
 export class DiscoveryEntry {
-    entry: RepositoryEntry;
+    entry?: RepositoryEntry;
 
     constructor(input?: any) {
 

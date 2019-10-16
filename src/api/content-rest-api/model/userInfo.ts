@@ -16,8 +16,8 @@
 */
 
 export class UserInfo {
-    displayName: string;
-    id: string;
+    displayName?: string;
+    id?: string;
 
     constructor(input?: any) {
 

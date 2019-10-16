@@ -24,7 +24,7 @@ const EventEmitter: any = ee;
 
 export class ProcessAuth extends AlfrescoApiClient {
 
-    ticket: string;
+    ticket?: string;
 
     authentications: Authentication = {
         'basicAuth': { ticket: '' }, type: 'activiti'
@@ -52,12 +52,16 @@ export class ProcessAuth extends AlfrescoApiClient {
     }
 
     changeHost() {
-        this.basePath = this.config.hostBpm + '/' + this.config.contextRootBpm;    //Activiti Call
+        if (this.config) {
+            this.basePath = this.config.hostBpm + '/' + this.config.contextRootBpm;    //Activiti Call
+        }
         this.ticket = undefined;
     }
 
     changeCsrfConfig(disableCsrf: boolean) {
-        this.config.disableCsrf = disableCsrf;
+        if (this.config) {
+            this.config.disableCsrf = disableCsrf;
+        }
     }
 
     saveUsername(username: string) {
@@ -74,8 +78,9 @@ export class ProcessAuth extends AlfrescoApiClient {
      * @returns A promise that returns {new authentication ticket} if resolved and {error} if rejected.
      * */
     login(username: string, password: string): Promise<any> {
-        this.authentications.basicAuth.username = username;
-        this.authentications.basicAuth.password = password;
+        this.authentications.basicAuth = {
+            username, password
+        };
 
         let postBody = {}, pathParams = {}, queryParams = {};
 
@@ -101,7 +106,7 @@ export class ProcessAuth extends AlfrescoApiClient {
             ).then(
                 () => {
                     this.saveUsername(username);
-                    let ticket = this.basicAuth( this.authentications.basicAuth.username,  this.authentications.basicAuth.password);
+                    const ticket = this.basicAuth(username, password);
                     this.setTicket(ticket);
                     promise.emit('success');
                     resolve(ticket);
@@ -166,27 +171,31 @@ export class ProcessAuth extends AlfrescoApiClient {
      *
      * @param  Ticket
      * */
-    setTicket(ticket: string) {
-        this.authentications.basicAuth.ticket = ticket;
-        this.authentications.basicAuth.password = null;
-        this.config.ticketBpm = ticket;
+    setTicket(ticket?: string) {
+        if (this.authentications.basicAuth) {
+            this.authentications.basicAuth.ticket = ticket;
+            this.authentications.basicAuth.password = undefined;
+        }
+        if (this.config) {
+            this.config.ticketBpm = ticket;
+        }
         this.storage.setItem('ticket-BPM', ticket);
         this.ticket = ticket;
     }
 
     invalidateSession() {
         this.storage.removeItem('ticket-BPM');
-        this.authentications.basicAuth.ticket = null;
-        this.authentications.basicAuth.password = null;
-        this.authentications.basicAuth.username = null;
-        this.config.ticketBpm = null;
-        this.ticket = null;
+        this.authentications.basicAuth = {};
+        if (this.config) {
+            this.config.ticketBpm = undefined;
+        }
+        this.ticket = undefined;
     }
 
     /**
      * Get the current Ticket
      * */
-    getTicket(): string {
+    getTicket(): string | undefined {
         return this.ticket;
     }
 

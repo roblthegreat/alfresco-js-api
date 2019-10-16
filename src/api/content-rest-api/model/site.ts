@@ -16,11 +16,11 @@
 */
 
 export class Site {
-    id: string;
-    guid: string;
-    title: string;
+    id?: string;
+    guid?: string;
+    title?: string;
     description?: string;
-    visibility: Site.VisibilityEnum | string;
+    visibility?: Site.VisibilityEnum | string;
     preset?: string;
     role?: Site.RoleEnum | string;
 

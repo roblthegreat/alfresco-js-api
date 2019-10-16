@@ -19,8 +19,8 @@ import { Pagination } from '../../content-rest-api/model/pagination';
 import { SiteContainerEntry } from './siteContainerEntry';
 
 export class SiteContainerPagingList {
-    pagination: Pagination;
-    entries: SiteContainerEntry[];
+    pagination?: Pagination;
+    entries?: SiteContainerEntry[];
 
     constructor(input?: any) {
 

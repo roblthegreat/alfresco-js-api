@@ -16,7 +16,7 @@
 */
 
 export class ProbeEntryEntry {
-    message: string;
+    message?: string;
 
     constructor(input?: any) {
 

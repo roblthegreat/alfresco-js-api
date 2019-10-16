@@ -19,8 +19,8 @@ import { Pagination } from '../../content-rest-api/model/pagination';
 import { TagEntry } from './tagEntry';
 
 export class TagPagingList {
-    pagination: Pagination;
-    entries: TagEntry[];
+    pagination?: Pagination;
+    entries?: TagEntry[];
 
     constructor(input?: any) {
 

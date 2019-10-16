@@ -19,8 +19,8 @@ import { Pagination } from '../../content-rest-api/model/pagination';
 import { SharedLinkEntry } from './sharedLinkEntry';
 
 export class SharedLinkPagingList {
-    pagination: Pagination;
-    entries: SharedLinkEntry[];
+    pagination?: Pagination;
+    entries?: SharedLinkEntry[];
 
     constructor(input?: any) {
 

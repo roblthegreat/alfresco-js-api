@@ -16,9 +16,9 @@
 */
 
 export class ClassificationInformation {
-    level: string;
+    level?: string;
     classificationAgency?: string;
-    reasonIds: string[];
+    reasonIds?: string[];
     downgradeOn?: Date;
     downgradeEvent?: string;
     downgradeInstructions?: string;

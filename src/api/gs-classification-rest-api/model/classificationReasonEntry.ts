@@ -18,7 +18,7 @@
 import { ClassificationReason } from './classificationReason';
 
 export class ClassificationReasonEntry {
-    entry: ClassificationReason;
+    entry?: ClassificationReason;
 
     constructor(input?: any) {
 

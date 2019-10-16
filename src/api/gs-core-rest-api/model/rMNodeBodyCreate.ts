@@ -21,8 +21,8 @@ export class RMNodeBodyCreate {
 The character . must not be used at the end of the name.
 
      */
-    name: string;
-    nodeType: string;
+    name?: string;
+    nodeType?: string;
     aspectNames?: string[];
     properties?: { [key: string]: string; };
 

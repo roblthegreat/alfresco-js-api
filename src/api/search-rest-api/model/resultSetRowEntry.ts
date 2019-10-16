@@ -21,7 +21,7 @@ import { ResultNode } from './resultNode';
  * A row in the result set
  */
 export class ResultSetRowEntry {
-    entry: ResultNode;
+    entry?: ResultNode;
 
     constructor(input?: any) {
 

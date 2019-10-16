@@ -16,10 +16,10 @@
 */
 
 export class StatusInfo {
-    isReadOnly: boolean;
-    isAuditEnabled: boolean;
-    isQuickShareEnabled: boolean;
-    isThumbnailGenerationEnabled: boolean;
+    isReadOnly?: boolean;
+    isAuditEnabled?: boolean;
+    isQuickShareEnabled?: boolean;
+    isThumbnailGenerationEnabled?: boolean;
 
     constructor(input?: any) {
 

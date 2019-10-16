@@ -19,9 +19,9 @@
  * The classification guide which the topic is contained in. This field is only returned when requested.
  */
 export class ClassificationGuidesInTopic {
-    name: string;
-    originatingOrganization: string;
-    publishedOn: Date;
+    name?: string;
+    originatingOrganization?: string;
+    publishedOn?: Date;
     enabled?: boolean;
     hasTopics?: boolean;
 

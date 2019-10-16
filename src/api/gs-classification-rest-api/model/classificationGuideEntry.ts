@@ -18,7 +18,7 @@
 import { ClassificationGuide } from './classificationGuide';
 
 export class ClassificationGuideEntry {
-    entry: ClassificationGuide;
+    entry?: ClassificationGuide;
 
     constructor(input?: any) {
 

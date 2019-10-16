@@ -18,10 +18,10 @@
 import { Site } from './site';
 
 export class SiteRole {
-    site: Site;
-    id: string;
-    guid: string;
-    role: SiteRole.RoleEnum | string;
+    site?: Site;
+    id?: string;
+    guid?: string;
+    role?: SiteRole.RoleEnum | string;
 
     constructor(input?: any) {
 

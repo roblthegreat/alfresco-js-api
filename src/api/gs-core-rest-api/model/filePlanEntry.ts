@@ -18,7 +18,7 @@
 import { FilePlan } from './filePlan';
 
 export class FilePlanEntry {
-    entry: FilePlan;
+    entry?: FilePlan;
 
     constructor(input?: any) {
 

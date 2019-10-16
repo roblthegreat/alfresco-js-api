@@ -18,7 +18,7 @@
 import { TransferContainer } from './transferContainer';
 
 export class TransferContainerEntry {
-    entry: TransferContainer;
+    entry?: TransferContainer;
 
     constructor(input?: any) {
 

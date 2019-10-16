@@ -18,7 +18,7 @@
 import { SiteMembershipRequest } from './siteMembershipRequest';
 
 export class SiteMembershipRequestEntry {
-    entry: SiteMembershipRequest;
+    entry?: SiteMembershipRequest;
 
     constructor(input?: any) {
 

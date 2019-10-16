@@ -16,7 +16,7 @@
 */
 
 export class RMSiteBodyCreate {
-    title: string;
+    title?: string;
     description?: string;
     compliance?: RMSiteBodyCreate.ComplianceEnum | string;
 

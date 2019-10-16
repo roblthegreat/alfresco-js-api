@@ -18,7 +18,7 @@
 import { RecordCategoryChild } from './recordCategoryChild';
 
 export class RecordCategoryChildEntry {
-    entry: RecordCategoryChild;
+    entry?: RecordCategoryChild;
 
     constructor(input?: any) {
 

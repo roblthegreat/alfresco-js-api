@@ -19,8 +19,8 @@ import { Pagination } from '../../content-rest-api/model/pagination';
 import { PersonNetworkEntry } from './personNetworkEntry';
 
 export class PersonNetworkPagingList {
-    pagination: Pagination;
-    entries: PersonNetworkEntry[];
+    pagination?: Pagination;
+    entries?: PersonNetworkEntry[];
 
     constructor(input?: any) {
 

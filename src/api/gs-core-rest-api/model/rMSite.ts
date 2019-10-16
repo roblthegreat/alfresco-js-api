@@ -16,12 +16,12 @@
 */
 
 export class RMSite {
-    id: string;
-    guid: string;
-    title: string;
+    id?: string;
+    guid?: string;
+    title?: string;
     description?: string;
-    visibility: RMSite.VisibilityEnum | string;
-    compliance: RMSite.ComplianceEnum | string;
+    visibility?: RMSite.VisibilityEnum | string;
+    compliance?: RMSite.ComplianceEnum | string;
     role?: RMSite.RoleEnum | string;
 
     constructor(input?: any) {

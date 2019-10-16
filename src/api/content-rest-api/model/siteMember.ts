@@ -18,9 +18,9 @@
 import { Person } from './person';
 
 export class SiteMember {
-    id: string;
-    person: Person;
-    role: SiteMember.RoleEnum | string;
+    id?: string;
+    person?: Person;
+    role?: SiteMember.RoleEnum | string;
 
     constructor(input?: any) {
 

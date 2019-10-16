@@ -18,7 +18,7 @@
 import { RMSite } from './rMSite';
 
 export class RMSiteEntry {
-    entry: RMSite;
+    entry?: RMSite;
 
     constructor(input?: any) {
 

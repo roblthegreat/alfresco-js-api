@@ -19,11 +19,11 @@ import { DateAlfresco } from '../../content-rest-api/model/dateAlfresco';
 import { EntitlementsInfo } from './entitlementsInfo';
 
 export class LicenseInfo {
-    issuedAt: Date;
-    expiresAt: Date;
-    remainingDays: number;
-    holder: string;
-    mode: string;
+    issuedAt?: Date;
+    expiresAt?: Date;
+    remainingDays?: number;
+    holder?: string;
+    mode?: string;
     entitlements?: EntitlementsInfo;
 
     constructor(input?: any) {

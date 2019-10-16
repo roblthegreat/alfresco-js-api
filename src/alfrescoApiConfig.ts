@@ -31,8 +31,8 @@ export class AlfrescoApiConfig {
     ticketEcm?: string;
     ticketBpm?: string;
     accessToken?: string;
-    disableCsrf?: boolean = false;
-    withCredentials?: boolean = false;
+    disableCsrf: boolean = false;
+    withCredentials: boolean = false;
 
     constructor(input?: any) {
         Object.assign(this, input);

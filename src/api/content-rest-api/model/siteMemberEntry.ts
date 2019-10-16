@@ -18,7 +18,7 @@
 import { SiteMember } from './siteMember';
 
 export class SiteMemberEntry {
-    entry: SiteMember;
+    entry?: SiteMember;
 
     constructor(input?: any) {
 

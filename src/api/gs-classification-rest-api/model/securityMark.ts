@@ -16,11 +16,11 @@
 */
 
 export class SecurityMark {
-    id: string;
-    name: string;
-    groupId: string;
-    groupName: string;
-    groupType: string;
+    id?: string;
+    name?: string;
+    groupId?: string;
+    groupName?: string;
+    groupType?: string;
 
     constructor(input?: any) {
 

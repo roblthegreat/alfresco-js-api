@@ -18,7 +18,7 @@
 import { UnfiledContainer } from './unfiledContainer';
 
 export class UnfiledContainerEntry {
-    entry: UnfiledContainer;
+    entry?: UnfiledContainer;
 
     constructor(input?: any) {
 

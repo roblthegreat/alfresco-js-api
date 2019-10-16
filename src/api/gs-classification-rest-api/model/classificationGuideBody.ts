@@ -16,9 +16,9 @@
 */
 
 export class ClassificationGuideBody {
-    name: string;
-    originatingOrganization: string;
-    publishedOn: Date;
+    name?: string;
+    originatingOrganization?: string;
+    publishedOn?: Date;
     enabled?: boolean;
 
     constructor(input?: any) {

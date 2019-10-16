@@ -18,7 +18,7 @@
 import { Instruction } from './instruction';
 
 export class InstructionEntry {
-    entry: Instruction;
+    entry?: Instruction;
 
     constructor(input?: any) {
 

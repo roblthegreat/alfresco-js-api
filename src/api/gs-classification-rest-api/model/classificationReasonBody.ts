@@ -16,8 +16,8 @@
 */
 
 export class ClassificationReasonBody {
-    code: string;
-    description: string;
+    code?: string;
+    description?: string;
 
     constructor(input?: any) {
 

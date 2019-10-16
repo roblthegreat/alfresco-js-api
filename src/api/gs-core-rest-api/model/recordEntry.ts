@@ -18,7 +18,7 @@
 import { Record } from './record';
 
 export class RecordEntry {
-    entry: Record;
+    entry?: Record;
 
     constructor(input?: any) {
 

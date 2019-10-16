@@ -18,7 +18,7 @@
 import { Transfer } from './transfer';
 
 export class TransferEntry {
-    entry: Transfer;
+    entry?: Transfer;
 
     constructor(input?: any) {
 

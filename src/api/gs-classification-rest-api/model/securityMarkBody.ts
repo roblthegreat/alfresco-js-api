@@ -16,8 +16,8 @@
 */
 
 export class SecurityMarkBody {
-    id: string;
-    groupId: string;
+    id?: string;
+    groupId?: string;
 
     constructor(input?: any) {
 

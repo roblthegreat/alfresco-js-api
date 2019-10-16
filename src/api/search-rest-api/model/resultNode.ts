@@ -22,23 +22,23 @@ import { SearchEntry } from './searchEntry';
 import { UserInfo } from '../../content-rest-api/model/userInfo';
 
 export class ResultNode {
-    id: string;
+    id?: string;
     /**
      * The name must not contain spaces or the following special characters: * \" < > \\ / ? : and |.
 The character . must not be used at the end of the name.
 
      */
-    name: string;
-    nodeType: string;
-    isFolder: boolean;
-    isFile: boolean;
-    isLocked?: boolean;
+    name?: string;
+    nodeType?: string;
+    isFolder = false;
+    isFile = false;
+    isLocked = false;
     modifiedAt?: Date;
     modifiedByUser?: UserInfo;
     createdAt?: Date;
     createdByUser?: UserInfo;
     parentId?: string;
-    isLink?: boolean;
+    isLink = false;
     content?: ContentInfo;
     aspectNames?: string[];
     properties?: any;

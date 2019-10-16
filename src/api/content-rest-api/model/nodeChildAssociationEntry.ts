@@ -18,7 +18,7 @@
 import { NodeChildAssociation } from './nodeChildAssociation';
 
 export class NodeChildAssociationEntry {
-    entry: NodeChildAssociation;
+    entry?: NodeChildAssociation;
 
     constructor(input?: any) {
 

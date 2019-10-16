@@ -18,7 +18,7 @@
 import { UnfiledRecordFolderChildAssociation } from './unfiledRecordFolderChildAssociation';
 
 export class UnfiledRecordFolderChildAssociationEntry {
-    entry: UnfiledRecordFolderChildAssociation;
+    entry?: UnfiledRecordFolderChildAssociation;
 
     constructor(input?: any) {
 

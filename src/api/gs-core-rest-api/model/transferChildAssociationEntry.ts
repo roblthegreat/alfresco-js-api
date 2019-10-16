@@ -18,7 +18,7 @@
 import { TransferChildAssociation } from './transferChildAssociation';
 
 export class TransferChildAssociationEntry {
-    entry: TransferChildAssociation;
+    entry?: TransferChildAssociation;
 
     constructor(input?: any) {
 

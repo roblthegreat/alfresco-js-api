@@ -20,19 +20,19 @@ import { DateAlfresco } from '../../content-rest-api/model/dateAlfresco';
 import { UserInfo } from '../../content-rest-api/model/userInfo';
 
 export class Version {
-    id: string;
+    id?: string;
     versionComment?: string;
     /**
      * The name must not contain spaces or the following special characters: * \" < > \\ / ? : and |.
 The character . must not be used at the end of the name.
 
      */
-    name: string;
-    nodeType: string;
-    isFolder: boolean;
-    isFile: boolean;
-    modifiedAt: Date;
-    modifiedByUser: UserInfo;
+    name?: string;
+    nodeType?: string;
+    isFolder?: boolean;
+    isFile?: boolean;
+    modifiedAt?: Date;
+    modifiedByUser?: UserInfo;
     content?: ContentInfo;
     aspectNames?: string[];
     properties?: { [key: string]: string; };

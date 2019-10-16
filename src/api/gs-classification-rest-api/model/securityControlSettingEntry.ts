@@ -18,7 +18,7 @@
 import { SecurityControlSetting } from './securityControlSetting';
 
 export class SecurityControlSettingEntry {
-    entry: SecurityControlSetting;
+    entry?: SecurityControlSetting;
 
     constructor(input?: any) {
 

@@ -18,7 +18,7 @@
 import { RepositoryInfo } from './repositoryInfo';
 
 export class RepositoryEntry {
-    repository: RepositoryInfo;
+    repository?: RepositoryInfo;
 
     constructor(input?: any) {
 

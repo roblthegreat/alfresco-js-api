@@ -19,15 +19,15 @@ export class PasswordResetBody {
     /**
      * the new password
      */
-    password: string;
+    password?: string;
     /**
      * the workflow id provided in the reset password email
      */
-    id: string;
+    id?: string;
     /**
      * the workflow key provided in the reset password email
      */
-    key: string;
+    key?: string;
 
     constructor(input?: any) {
 

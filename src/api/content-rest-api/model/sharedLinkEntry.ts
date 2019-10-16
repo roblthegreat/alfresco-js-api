@@ -18,7 +18,7 @@
 import { SharedLink } from './sharedLink';
 
 export class SharedLinkEntry {
-    entry: SharedLink;
+    entry?: SharedLink;
 
     constructor(input?: any) {
 

@@ -18,7 +18,7 @@
 import { UnfiledContainerChildAssociation } from './unfiledContainerChildAssociation';
 
 export class UnfiledContainerChildAssociationEntry {
-    entry: UnfiledContainerChildAssociation;
+    entry?: UnfiledContainerChildAssociation;
 
     constructor(input?: any) {
 

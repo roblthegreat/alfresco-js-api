@@ -19,9 +19,9 @@
  * A classification guide in a list.
  */
 export class ClassificationGuides {
-    name: string;
-    originatingOrganization: string;
-    publishedOn: Date;
+    name?: string;
+    originatingOrganization?: string;
+    publishedOn?: Date;
     enabled?: boolean;
     hasTopics?: boolean;
 

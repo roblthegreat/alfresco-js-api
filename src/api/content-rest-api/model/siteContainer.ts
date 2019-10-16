@@ -16,8 +16,8 @@
 */
 
 export class SiteContainer {
-    id: string;
-    folderId: string;
+    id?: string;
+    folderId?: string;
 
     constructor(input?: any) {
 

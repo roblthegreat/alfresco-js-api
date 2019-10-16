@@ -16,13 +16,13 @@
 */
 
 export class VersionInfo {
-    major: string;
-    minor: string;
-    patch: string;
-    hotfix: string;
-    schema: number;
-    label: string;
-    display: string;
+    major?: string;
+    minor?: string;
+    patch?: string;
+    hotfix?: string;
+    schema?: number;
+    label?: string;
+    display?: string;
 
     constructor(input?: any) {
 

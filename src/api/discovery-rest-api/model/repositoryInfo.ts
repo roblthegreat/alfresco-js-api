@@ -21,9 +21,9 @@ import { StatusInfo } from './statusInfo';
 import { VersionInfo } from './versionInfo';
 
 export class RepositoryInfo {
-    edition: string;
-    version: VersionInfo;
-    status: StatusInfo;
+    edition?: string;
+    version?: VersionInfo;
+    status?: StatusInfo;
     license?: LicenseInfo;
     modules?: ModuleInfo[];
 

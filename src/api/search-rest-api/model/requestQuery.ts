@@ -30,7 +30,7 @@ export class RequestQuery {
     /**
      * The query which may have been generated in some way from the userQuery
      */
-    query: string;
+    query?: string;
 
     constructor(input?: any) {
 
