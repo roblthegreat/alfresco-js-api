@@ -333,8 +333,20 @@ export class AlfrescoApiClient implements ee.Emitter {
      *                                   If an empty string is set as the value of responseType, it is assumed as type "text".
      * constructor for a complex type.   * @returns {Promise} A Promise object.
      */
-    callApi(path: string, httpMethod: string, pathParams?: any, queryParams?: any, headerParams?: any, formParams?: any, bodyParam?: any,
-            contentTypes?: string[], accepts?: string[], returnType?: any, contextRoot?: string, responseType?: string): Promise<any> {
+    callApi(
+        path: string,
+        httpMethod: string,
+        pathParams?: any,
+        queryParams?: any,
+        headerParams?: any,
+        formParams?: any,
+        bodyParam?: any,
+        contentTypes?: string[],
+        accepts?: string[],
+        returnType?: any,
+        contextRoot?: string,
+        responseType?: string
+    ): Promise<any> {
 
         let url;
 
@@ -344,8 +356,22 @@ export class AlfrescoApiClient implements ee.Emitter {
         } else {
             url = this.buildUrl(path, pathParams);
         }
-        return this.callHostApi(path, httpMethod, pathParams, queryParams, headerParams, formParams, bodyParam,
-                                contentTypes, accepts, returnType, contextRoot, responseType, url);
+
+        return this.callHostApi(
+            path,
+            httpMethod,
+            pathParams,
+            queryParams,
+            headerParams,
+            formParams,
+            bodyParam,
+            contentTypes,
+            accepts,
+            returnType,
+            contextRoot,
+            responseType,
+            url
+        );
     }
 
     /**
@@ -368,20 +394,45 @@ export class AlfrescoApiClient implements ee.Emitter {
      *                                   If an empty string is set as the value of responseType, it is assumed as type "text".
      * constructor for a complex type.   * @returns {Promise} A Promise object.
      */
-    callCustomApi(path: string, httpMethod: string, pathParams?: any, queryParams?: any, headerParams?: any, formParams?: any, bodyParam?: any,
-                  contentTypes?: string[], accepts?: string[], returnType?: any, contextRoot?: string, responseType?: string): Promise<any> {
+    callCustomApi(
+        path: string,
+        httpMethod: string,
+        pathParams?: any,
+        queryParams?: any,
+        headerParams?: any,
+        formParams?: any,
+        bodyParam?: any,
+        contentTypes?: string[],
+        accepts?: string[],
+        returnType?: any,
+        contextRoot?: string,
+        responseType?: string
+    ): Promise<any> {
         const url = this.buildUrlCustomBasePath(path, '', pathParams);
 
-        return this.callHostApi(path, httpMethod, pathParams, queryParams, headerParams, formParams, bodyParam,
-                                contentTypes, accepts, returnType, contextRoot, responseType, url);
+        return this.callHostApi(
+            path,
+            httpMethod,
+            pathParams,
+            queryParams,
+            headerParams,
+            formParams,
+            bodyParam,
+            contentTypes,
+            accepts,
+            returnType,
+            contextRoot,
+            responseType,
+            url
+        );
     }
 
     /**
      * Invokes the REST service using the supplied settings and parameters.
      *
-     * @param {String} path The base URL to invoke.
+     * @param {String} _path (deprecated) The base URL to invoke.
      * @param {String} httpMethod The HTTP method to use.
-     * @param {Object.<String, String>} pathParams A map of path parameters and their values.
+     * @param {Object.<String, String>} _pathParams (deprecated) A map of path parameters and their values.
      * @param {Object.<String, Object>} queryParams A map of query parameters and their values.
      * @param {Object.<String, Object>} headerParams A map of header parameters and their values.
      * @param {Object.<String, Object>} formParams A map of form parameters and their values.
@@ -389,7 +440,7 @@ export class AlfrescoApiClient implements ee.Emitter {
      * @param {String[]} contentTypes An array of request MIME types.
      * @param {String[]} accepts An array of acceptable response MIME types.
      * @param {(String|Array|any)} returnType The required type to return; can be a string for simple types or the
-     * @param {(String)} contextRoot alternative contextRoot
+     * @param {(String)} _contextRoot (deprecated) alternative contextRoot
      * @param {(String)} responseType  is an enumerated value that returns the type of the response.
      *                                  It also lets the author change the response type to one "arraybuffer", "blob", "document",
      *                                  "json", or "text".
@@ -397,24 +448,43 @@ export class AlfrescoApiClient implements ee.Emitter {
      * constructor for a complex type.   * @returns {Promise} A Promise object.
      */
     callHostApi(
-        // @ts-ignore
-        path: string,
+        /** @deprecated */
+        _path: string,
         httpMethod: string,
-        // @ts-ignore
-        pathParams?: any,
-        queryParams?: any, headerParams?: any, formParams?: any, bodyParam?: any,
-        contentTypes?: string[], accepts?: string[], returnType?: any,
-        // @ts-ignore
-        contextRoot?: string,
-        responseType?: string, url?: string): Promise<any> {
-
+        /** @deprecated */
+        _pathParams?: any,
+        queryParams?: any,
+        headerParams?: any,
+        formParams?: any,
+        bodyParam?: any,
+        contentTypes?: string[],
+        accepts?: string[],
+        returnType?: any,
+        /** @deprecated */
+        _contextRoot?: string,
+        responseType?: string,
+        url?: string
+    ): Promise<any> {
         const eventEmitter: any = EventEmitter({});
 
-        let request = this.buildRequest(httpMethod, url, queryParams, headerParams, formParams, bodyParam,
-                                        contentTypes, accepts, responseType, eventEmitter, returnType);
+        let request = this.buildRequest(
+            httpMethod,
+            url,
+            queryParams,
+            headerParams,
+            formParams,
+            bodyParam,
+            contentTypes,
+            accepts,
+            responseType,
+            eventEmitter,
+            returnType
+        );
 
         if (returnType === 'Binary') {
-            request = request.buffer(true).parse(superagent.parse['application/octet-stream']);
+            request = request
+                .buffer(true)
+                .parse(superagent.parse['application/octet-stream']);
         }
 
         const promise: any = new Promise((resolve, reject) => {
