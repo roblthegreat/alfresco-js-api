@@ -9,17 +9,18 @@ import { BaseApi } from './base.api';
 * @module {{#invokerPackage}}{{&invokerPackage}}/{{/invokerPackage}}{{#apiPackage}}{{&apiPackage}}/{{/apiPackage}}{{classname}}
 */
 export class {{classname}} extends BaseApi {
-    {{#operation}}/**
-    * {{&summary}}
-    * {{&description}}
-    * {{&notes}}
+    {{#operation}}
+    /**{{#summary}}
+    * {{&summary}}{{/summary}}{{#description}}
+    * {{&description}}{{/description}}{{#notes}}
+    * {{&notes}}{{/notes}}
     * {{#allParams}}{{#required}}
     * @param{{&vendorExtensions.x-jsdoc-type}} {{paramName}} {{&description}}{{/required}}{{/allParams}}{{#hasOptionalParams}}
     * @param opts Optional parameters{{#allParams}}{{^required}}
     * @param{{&vendorExtensions.x-jsdoc-type}} opts.{{paramName}} {{&description}}{{#defaultValue}} (default to {{.}}){{/defaultValue}}{{/required}}{{/allParams}}{{/hasOptionalParams}}
     * @return Promise<{{#returnType}}{{&returnType}}{{#isResponseTypeFile}}|undefined{{/isResponseTypeFile}}{{/returnType}}{{^returnType}}{}{{/returnType}}>
     */
-    {{nickname}}({{&vendorExtensions.x-codegen-argList}}) : Promise<{{#returnType}}{{&returnType}}{{#isResponseTypeFile}}|undefined{{/isResponseTypeFile}}{{/returnType}}{{^returnType}}any{{/returnType}}{{#canReturnError}} | {{&canReturnError}}{{/canReturnError}}> {
+    {{nickname}}({{&vendorExtensions.x-codegen-argList}}): Promise<{{#returnType}}{{&returnType}}{{#isResponseTypeFile}}|undefined{{/isResponseTypeFile}}{{/returnType}}{{^returnType}}any{{/returnType}}{{#canReturnError}} | {{&canReturnError}}{{/canReturnError}}> {
         {{#hasOptionalParams}}opts = opts || {};{{/hasOptionalParams}}
         let postBody = {{#bodyParam}}{{#required}}{{paramName}}{{/required}}{{^required}}opts['{{paramName}}']{{/required}}{{/bodyParam}}{{^bodyParam}}null{{/bodyParam}};
         {{#allParams}}{{#required}}
@@ -32,7 +33,8 @@ export class {{classname}} extends BaseApi {
             '{{baseName}}': {{#required}}{{paramName}}{{/required}}{{^required}}opts['{{paramName}}']{{/required}}{{#hasMore}},{{/hasMore}}{{/pathParams}}
         };
 
-        let queryParams = { {{#queryParams}}
+        let queryParams = {
+            {{#queryParams}}
             '{{baseName}}': {{#collectionFormat}}this.apiClient.buildCollectionParam({{#required}}{{paramName}}{{/required}}{{^required}}opts['{{paramName}}']{{/required}}, '{{collectionFormat}}'){{/collectionFormat}}{{^collectionFormat}}{{#required}}{{paramName}}{{/required}}{{^required}}opts['{{paramName}}']{{/required}}{{/collectionFormat}}{{#hasMore}},{{/hasMore}}{{/queryParams}}
         };
 
@@ -40,17 +42,26 @@ export class {{classname}} extends BaseApi {
             {{#headerParams}}
             '{{baseName}}': {{#required}}{{paramName}}{{/required}}{{^required}}opts['{{paramName}}']{{/required}}{{#hasMore}},{{/hasMore}}{{/headerParams}}
         };
-        let formParams = { {{#formParams}}
-        '{{baseName}}': {{#collectionFormat}}this.apiClient.buildCollectionParam({{#required}}{{paramName}}{{/required}}{{^required}}opts['{{paramName}}']{{/required}}, '{{collectionFormat}}'){{/collectionFormat}}{{^collectionFormat}}{{#required}}{{paramName}}{{/required}}{{^required}}opts['{{paramName}}']{{/required}}{{/collectionFormat}}{{#hasMore}},{{/hasMore}}{{/formParams}}
+        let formParams = {
+            {{#formParams}}
+            '{{baseName}}': {{#collectionFormat}}this.apiClient.buildCollectionParam({{#required}}{{paramName}}{{/required}}{{^required}}opts['{{paramName}}']{{/required}}, '{{collectionFormat}}'){{/collectionFormat}}{{^collectionFormat}}{{#required}}{{paramName}}{{/required}}{{^required}}opts['{{paramName}}']{{/required}}{{/collectionFormat}}{{#hasMore}},{{/hasMore}}{{/formParams}}
         };
 
         let contentTypes = [{{#consumes}}'{{& mediaType}}'{{#hasMore}}, {{/hasMore}}{{/consumes}}];
         let accepts = [{{#produces}}'{{& mediaType}}'{{#hasMore}}, {{/hasMore}}{{/produces}}];
 
         return this.apiClient.callApi(
-        '{{&path}}', '{{httpMethod}}',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        contentTypes, accepts {{#returnType}},{{&returnType}}{{/returnType}})
+            '{{&path}}',
+            '{{httpMethod}}',
+            pathParams,
+            queryParams,
+            headerParams,
+            formParams,
+            postBody,
+            contentTypes,
+            accepts{{#returnType}},
+            {{&returnType}}{{/returnType}}
+        );
     }
 {{/operation}}
 
