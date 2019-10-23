@@ -1,14 +1,15 @@
 {{>licenseInfo}}
-
 import { AlfrescoApi } from '../../../alfrescoApi';
 import { AlfrescoApiClient } from '../../../alfrescoApiClient';
 
 export class BaseApi {
 
-apiClient: AlfrescoApiClient;
+    apiClient: AlfrescoApiClient;
 
     constructor(alfrescoApi?: AlfrescoApi) {
-        this.apiClient = alfrescoApi.ecmClient;
+        if (alfrescoApi) {
+            this.apiClient = alfrescoApi.authClient;
+        }
     }
 
     errorMessage(param: string, methodName: string) {
